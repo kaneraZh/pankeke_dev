@@ -1,12 +1,14 @@
-extends CharachterBody2D
+extends CharacterBody2D
 
-
-# Called when the node enters the scene tree for the first time.
 func _ready():
 	var speed:int = 20
-	var velocity:Vector2 = Vector2.ZERO
+
 	var friction:float = 0.8
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	var axis_y
+	func get_input():
+		var input_direction = Input.get_vector("ui_left", "ui_right", "ui_up", "ui_down")
+	velocity = input_direction * speed
+
+func _physics_process(delta):
+	get_input()
+	move_and_slide()
