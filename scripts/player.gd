@@ -1,7 +1,7 @@
 extends CharacterBody2D
 
-var speed:int = 20
-var friction:float = 0.8
+@export var speed:int = 200
+#@export var friction:float = 0.8
 
 func get_input():
 	var input_direction = Input.get_vector("ui_left", "ui_right", "ui_up", "ui_down")

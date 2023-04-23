@@ -6,6 +6,7 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_cck2o"]
 
 [node name="CharacterBody2D" type="CharacterBody2D"]
+motion_mode = 1
 script = ExtResource("1_c8osv")
 metadata/_edit_group_ = true
 
@@ -16,3 +17,5 @@ region_rect = Rect2(0, 0, 20, 20)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_cck2o")
+
+[node name="RigidBody2D" type="RigidBody2D" parent="."]
